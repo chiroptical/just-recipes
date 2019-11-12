@@ -41,23 +41,20 @@ I set this up on Pop!\_OS 19.10
 Install postgres
 
 ```
-sudo apt install postgres libpq-dev
+sudo apt install postgresql libpq-dev
 ```
 
 From `postgres` (`sudo su - postgres`) user:
 
-```
-createuser justrecipes
-```
-
 Enter `psql` REPL,
 
 ```
-> create user justrecipes with password 'justrecipes';
-> create database justecipes;
-> create database justrecipes_test;
-> grant all privileges on database justrecipes to justrecipes;
-> grant all privileges on database justrecipes_test to justrecipes;
+create user justrecipes with password 'justrecipes';
+create database justrecipes;
+create database justrecipes_test;
+grant all privileges on database justrecipes to justrecipes;
+grant all privileges on database justrecipes_test to justrecipes;
+exit
 ```
 
 Finally, modify `/etc/postgresql/11/main/pg_hba.conf` look for comment "Put
