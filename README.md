@@ -57,13 +57,6 @@ grant all privileges on database justrecipes_test to justrecipes;
 exit
 ```
 
-Finally, modify `/etc/postgresql/11/main/pg_hba.conf` look for comment "Put
-your actual configuration here" and place the following line after it.
-
-```
-local   justrecipes     justrecipes                             md5
-```
-
 ## Haskell Setup
 
 1. If you haven't already, [install Stack](https://haskell-lang.org/get-started)
