@@ -72,6 +72,8 @@ Start a hot-reload development server with:
 stack exec -- yesod devel
 ```
 
+May need to `stack install yesod-bin` for this to work.
+
 ## Tests
 
 ```
